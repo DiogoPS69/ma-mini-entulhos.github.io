@@ -1,0 +1,32 @@
+Pacote de exportação completo — pronto
+
+Seu site é 100% estático: todo o código necessário está no pacote ma-mini-entulho-fonte.zip (na raiz do projeto, 470 KB), incluindo o guia passo a passo README-DEPLOY.md em português
+Nenhuma alteração foi feita no design ou nas funcionalidades do site — o pacote apenas reúne os arquivos
+O site não precisa de servidor, banco de dados ou chaves: os links de WhatsApp/Instagram estão fixos no código e a logo/favicon vão nos arquivos
+Estrutura de pastas (essencial):
+
+ma-mini-entulho/
+├── README-DEPLOY.md          ← guia de hospedagem passo a passo
+├── frontend/                 ← TUDO o que o site precisa
+│   ├── package.json          (dependências: React, Tailwind, framer-motion, lenis)
+│   ├── tailwind.config.js    (cores da marca: azul #1E3F75 / #648DD8)
+│   ├── public/               index.html (SEO) · logo.png · favicon.png
+│   └── src/
+│       ├── App.js · index.js · index.css
+│       ├── lib/site.js       (links WhatsApp/Instagram e fotos)
+│       └── components/       Nav · Hero · Marquee · ComoFunciona · Diferencial
+│                            Servicos · OndeAtendemos · CtaBanner
+│                            InstagramSection · Footer · WhatsAppFloat · etc.
+└── backend/                  (ignorar — o site não usa)
+Como reconstruir em outra hospedagem:
+
+No seu computador: cd frontend → yarn install → yarn build → a pasta build/ é o site pronto para subir em qualquer hospedagem (cPanel, Netlify, Vercel, Cloudflare Pages)
+Como baixar o código pela plataforma (informação oficial do suporte): não existe botão "baixar ZIP" — são duas formas oficiais: 1) botão Save → Save to GitHub (envia o código para seu repositório; recurso dos planos pagos, o Free só copia manualmente); 2) botão Code → Open in browser (abre o editor VS Code para visualizar e copiar os arquivos). Arquivos .env não vão na exportação — neste projeto nenhuma chave é necessária, então isso não te afeta. O pacote ZIP que gerei acima também está disponível no workspace como alternativa.
+
+Checked: pacote gerado e conferido (90 arquivos, ~5.400 linhas, incluindo yarn.lock com as versões exatas das dependências, logo.png e favicon.png)
+Credentials & handoff: nenhuma credencial é necessária — WhatsApp +55 51 99808-7999 e Instagram @m.a_mini.entulhos já estão fixos no código (src/lib/site.js)
+Next Action Items:
+GitHub Pronto: Save the project to GitHub so you can import it on the new host
+Domínio Próprio: Turn on your own domain after the first deploy on the new host
+SEO Google: Add Search Console verification and a sitemap so Gravataí finds you on Google
+Formulário Guiado: Add a quick quote form that builds the WhatsApp message with city and volume
